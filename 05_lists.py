@@ -10,6 +10,12 @@ print(numbers)
 numbers_v2 = [element for element in range(1, 11)]
 print(numbers_v2)
 
+# Imprimir los números pares
+numbers = [ 35, 38, 29, 88, 52, 40, 11, 99, 74 ]
+even_numbers = [ number for number in numbers if number % 2 == 0 ]
+print('Toda la lista de numbers: ', numbers)
+print('Números pares: ', even_numbers)
+
 
 # Modo tradicional de generar una lista del 1 al 10 multiplicando por 2
 numbers = []

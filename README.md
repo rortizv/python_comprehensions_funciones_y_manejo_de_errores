@@ -1,4 +1,3 @@
-This is a Python learning roadmap.
-This is the 2nd module:
+Este es un roadmap de aprendizaje de Python
 
-Comprehensions, funciones y manejo de errores
+Este es el módulo No. 2: Comprehensions, funciones y manejo de errores

@@ -1,15 +1,16 @@
 import mod
+import read_csv
+import charts
 
-# keys, values = mod.get_population()
-# print(keys, values)
+def run():
+    data = read_csv.read_csv('./app/data.csv')
+    country = input('Type Country => ')
+    result = mod.get_population_by_country(data, country)
 
-data = [
-    { 'Country': 'col', 'Population': 4000 },
-    { 'Country': 'bra', 'Population': 10000 },
-    { 'Country': 'arg', 'Population': 3000 },
-    { 'Country': 'usa', 'Population': 15000 },
-    { 'Country': 'mex', 'Population': 800 }
-]
+    if len(result) > 0:
+        country = result[0]
+        labels, values = mod.get_population(country)
+        charts.generate_bar_chart(labels, values)
 
-result = mod.get_population_by_country(data, 'bra')
-print(result)
+if __name__ == '__main__':
+    run()

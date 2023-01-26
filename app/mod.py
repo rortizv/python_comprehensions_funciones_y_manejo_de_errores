@@ -1,7 +1,15 @@
-def get_population():
-    keys = [ 'col', 'bra', 'arg', 'usa', 'mex' ]
-    values = [ 4000, 10000, 3000, 15000, 800 ]
-    return keys, values
+def get_population(country_dict):
+    population_dict = {
+        '2022': int(country_dict['2022 Population']),
+        '2020': int(country_dict['2020 Population']),
+        '2015': int(country_dict['2015 Population']),
+        '2010': int(country_dict['2010 Population']),
+        '2000': int(country_dict['2000 Population']),
+        '1990': int(country_dict['1990 Population'])
+    }
+    labels = population_dict.keys()
+    values = population_dict.values()
+    return labels, values
 
 def get_population_by_country(data, country):
     result = list(filter(lambda item: item['Country'] == country, data))
